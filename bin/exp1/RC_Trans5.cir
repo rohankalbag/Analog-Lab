@@ -1,0 +1,23 @@
+Current through resistor and capacitor using dummy voltage src
+
+*describe circuit
+*<element-name> <nodes> <value/model>
+r1 1 2 1k
+c 2 3 1u
+r2 2 4 1k
+vd1 3 0 0
+vd2 4 0 0 
+v 1 0 pwl(0 0 10m 0 11m 5 20m 5)
+
+*analysis command
+.tran 10u 20m
+.control
+
+run
+
+*display command
+plot i(vd1)
+plot i(vd2)
+.endc 
+
+.end

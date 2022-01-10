@@ -1,0 +1,17 @@
+Clipper circuit
+
+.include Diode_1N914.txt
+r 1 2 1k
+d 2 3 1N914
+v2 3 0 2
+v1 1 0
+
+.dc v1 -5 5 0.1
+
+.control
+
+run
+plot v(2)
+
+.endc
+.end
