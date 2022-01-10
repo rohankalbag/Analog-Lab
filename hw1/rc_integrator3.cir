@@ -1,0 +1,13 @@
+RC Integrator
+*Components
+r1 1 2 10k
+c1 2 0 0.1u
+*pulse of width 0.001s = RC, height 1, and period 0.002s
+V1 1 0 pulse(0 1 0 0 0 0.001 0.002)
+*Analysis Command
+.tran 0.0001 0.006
+.control 
+run
+plot v(1) v(2)
+.endc
+.end
