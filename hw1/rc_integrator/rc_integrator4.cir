@@ -2,7 +2,6 @@ RC Integrator
 *Components
 r1 1 2 10k
 c1 2 0 0.1u
-*pulse of width 0.0005s = 0.5RC, height 1, and period 0.001s
 V1 1 0 pulse(0 1 0 0 0 0.0005 0.001)
 *Analysis Command
 .tran 0.00005 0.003

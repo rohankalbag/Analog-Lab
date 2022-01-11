@@ -1,0 +1,12 @@
+RC Differentiator
+*Components
+c1 1 2 0.1u
+r1 2 0 10k
+V1 1 0 pulse(0 1 0 0 0 0.5m 1m)
+*Analysis Command
+.tran 0.05m 3m
+.control 
+run
+plot v(1) v(2)
+.endc
+.end

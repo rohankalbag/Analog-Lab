@@ -1,7 +1,7 @@
-RC Integrator
+RC Differentiator
 *Components
-r1 1 2 10k
-c1 2 0 0.1u
+c1 1 2 0.1u
+r1 2 0 10k
 V1 1 0 pulse(0 1 0 0 0 0.01m 0.02m)
 *Analysis Command
 .tran 1u 0.06m
