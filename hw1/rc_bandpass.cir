@@ -1,12 +1,17 @@
-RC highpass filter
+RC bandpass filter
+
 *Components
-c1 1 2 0.1u
-r1 2 0 10k
+r1 1 2 10k
+c1 2 3 0.1u
+r2 3 0 10k
+c2 3 0 0.1u
 V1 1 0 dc 0 ac 1 $ac analysis
+
 *Analysis Command
 .ac dec 10 1 10k 
 .control 
 run
-plot vdb(2)
+plot vdb(3)
 .endc
 .end
+
