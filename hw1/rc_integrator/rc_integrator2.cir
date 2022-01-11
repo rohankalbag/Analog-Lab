@@ -2,9 +2,9 @@ RC Integrator
 *Components
 r1 1 2 10k
 c1 2 0 0.1u
-V1 1 0 pulse(0 1 0 0 0 0.005 0.01)
+V1 1 0 pulse(0 5 0 0 0 0.005 0.01)
 *Analysis Command
-.tran 0.0005 0.03
+.tran 0.01m 0.03
 .control 
 run
 plot v(1) v(2)
