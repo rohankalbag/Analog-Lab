@@ -4,7 +4,7 @@ c1 1 2 0.1u
 r1 2 0 10k
 V1 1 0 dc 0 ac 1 $ac analysis
 *Analysis Command
-.ac dec 10 1 10k 
+.ac dec 10 1m 1k 
 .control 
 run
 plot vdb(2)
