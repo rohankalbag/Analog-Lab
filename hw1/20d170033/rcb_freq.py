@@ -12,6 +12,7 @@ y_axis_column_start = x_axis_column_number+1
 global readings
 global x_readings
 global y_readings
+epsilon = 0.02
 
 x_readings = []
 y_readings = []
@@ -52,13 +53,16 @@ if __name__ == '__main__':
     print("Peak Amplitude Frequency:",x_array[index][0],"Hz")
     print("Maximum Amplitude in dB:", y_array[index][0])
     i=index.copy()
-    while(abs(y_array[index][0]-y_array[i][0])<3):
-        #print(abs(y_array[index][0]-y_array[i][0]))
+    while(True):
         i+=1
+        if(abs(abs(y_array[index][0]-y_array[i][0])-3)<epsilon):
+            break
     print("f_upper:",x_array[i][0],"Hz")
     i=index.copy()
-    while(abs(y_array[index][0]-y_array[i][0])<3):
+    while(True):
         i-=1
+        if(abs(abs(y_array[index][0]-y_array[i][0])-3)<epsilon):
+            break
     print("f_lower:",x_array[i][0],"Hz")
 
 

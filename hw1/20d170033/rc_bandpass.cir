@@ -8,7 +8,7 @@ c2 3 0 0.1u
 V1 1 0 dc 0 ac 1 $ac analysis
 
 *Analysis Command
-.ac dec 10 1m 10Meg 
+.ac dec 500 1m 10Meg 
 .control 
 run
 plot vdb(3)
