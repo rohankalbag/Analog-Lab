@@ -11,6 +11,7 @@ V1 1 0 dc 0 ac 1 $ac analysis
 .control 
 run
 plot vdb(3)
+print vdb(3)
 .endc
 .end
 
