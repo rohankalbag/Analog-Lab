@@ -1,0 +1,22 @@
+Unregulated DC supply without capacitive filter
+*Rohan Rajesh Kalbag - 20D170033
+
+.include Diode_1N914.txt
+v1 1 2 sin(0 21.213 50 0 0 0)
+r1 3 0 1k
+c1 3 0 1m
+d1 1 5 1N914
+vd1 5 3 ac 0 dc 0
+d2 0 6 1N914
+vd2 6 1 ac 0 dc 0
+d3 2 3 1N914
+d4 0 2 1N914
+
+.tran 0.1m 100m
+.control
+run
+plot v(3)
+plot i(vd1) i(vd2)
+
+.endc
+.end
