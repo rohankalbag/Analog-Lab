@@ -21,7 +21,6 @@ vx1 5 0 0
 .op
 .control
 run
-print v(3)
-print i(vx1) i(vr1) i(vr2)
+print v(3) i(vx1) i(vr1) i(vr2)
 .endc
 .end
