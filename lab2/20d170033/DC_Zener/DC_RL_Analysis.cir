@@ -1,0 +1,28 @@
+DC Power Supply with Zener Diode Regulator
+*Rohan Rajesh Kalbag - 20D170033
+
+.SUBCKT ZENER_12 1 2
+D1 1 2 DF
+DZ 3 1 DR
+VZ 2 3 10.8
+.MODEL DF D(IS =27.5p RS=0.620 N=1.10 CJO =78.3p VJ=1.00 M =0.330 TT =50.1n)
+.MODEL DR D(IS =5.49f RS=50 N=1.77 )
+.ENDS
+
+v1 1 0 dc 20
+r1 1 3 470
+vr1 3 2 0
+x1 5 2 ZENER_12
+r2 2 4 1k
+vr2 4 0 0
+vx1 5 0 0
+
+
+.dc r2 1 1k 50
+.control
+run
+print v(3) i(vx1) i(vr1) i(vr2)
+plot i(vx1) i(vr1) i(vr2)
+plot v(3)
+.endc
+.end
