@@ -29,6 +29,7 @@ rl 3 0 1k
 .dc v1 15 25 0.5
 .control
 run
+print v(3)
 plot v(3) vs v(1)
 .endc
 .end
