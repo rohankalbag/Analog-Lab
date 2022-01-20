@@ -17,7 +17,7 @@ VZ 2 3 4.4
 .MODEL DR D(IS =5.49f RS=50 N=1.77 )
 .ENDS
 
-v1 1 0 dc 20
+v1 1 0 dc
 rc 1 2 1k
 q1 1 2 3 SL100
 q2 2 4 5 bc547a
@@ -26,9 +26,9 @@ r1 3 4 10.25k
 r2 4 0 14.75k
 rl 3 0 1k
 
-.op
+.dc v1 15 25 0.5
 .control
 run
-print v(1) v(2) v(3) v(4) v(5)
+plot v(3) vs v(1)
 .endc
 .end
