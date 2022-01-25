@@ -1,0 +1,18 @@
+Inverting Amplifier with Opamp-1
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+v1 3 0 dc 15
+v2 4 0 dc -15
+x1 1 2 3 4 5 ua741
+vi 1 0 sin(0 2 1k 0 0 0)
+r1 0 2 1k
+r2 2 5 10k
+
+.tran 1ms 10ms
+.control
+run
+plot v(5) v(1)
+.endc
+.end
