@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #_______________________________________________________________________________________________________________
-filename = ["Non Inverting Amplifier\\bode_10k","Inverting Amplifier\\bode_100k"]  
+filename = ["bode_10k","bode_100k"]   
 #_______________________________________________________________________________________________________________
 
 x_axis_column_number = 1                     
