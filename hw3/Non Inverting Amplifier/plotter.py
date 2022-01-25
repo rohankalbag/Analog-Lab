@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #_______________________________________________________________________________________________________________
-filename = ["Inverting Amplifier\\bode_10k","Inverting Amplifier\\bode_100k"]  
+filename = ["Non Inverting Amplifier\\bode_10k","Inverting Amplifier\\bode_100k"]  
 #_______________________________________________________________________________________________________________
 
 x_axis_column_number = 1                     
@@ -39,7 +39,7 @@ def read_file(axis_index, filename):
 
 
 if __name__ == '__main__':
-    plt.title("Bode Plot for Inverting Amplifier")
+    plt.title("Bode Plot for Non Inverting Amplifier")
     x_readings = read_file(x_axis_column_number,filename[0])
     y_readings = []
     for column in range(y_axis_column_start, 1 + y_axis_column_start):
