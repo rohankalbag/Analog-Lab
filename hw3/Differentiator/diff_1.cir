@@ -1,0 +1,18 @@
+Differentiator using Opamp
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+v1 2 0 dc 15
+v2 3 0 dc -15
+x1 0 1 2 3 4 ua741
+vi 5 0 pwl(0 -2 0.5m 2 1m -2 1.5m 2 2m -2 2.5m 2 3.0m -2)
+c1 5 1 0.01u
+r1 1 4 10k
+
+.tran 1us 3ms
+.control
+run
+plot v(5) v(4)
+.endc
+.end

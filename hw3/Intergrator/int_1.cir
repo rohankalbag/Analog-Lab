@@ -1,0 +1,19 @@
+Integrator using Opamp
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+v1 2 0 dc 15
+v2 3 0 dc -15
+x1 0 1 2 3 4 ua741
+vi 5 0 pulse(-2 2 0 0 0 1ms 2ms 0)
+r 5 1 10k
+r1 1 4 470k
+c1 1 4 0.01u
+
+.tran 1us 20ms
+.control
+run
+plot v(5) v(4)
+.endc
+.end
