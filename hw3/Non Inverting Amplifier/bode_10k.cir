@@ -6,7 +6,7 @@ Inverting Amplifier with Opamp
 v1 3 0 dc 15
 v2 4 0 dc -15
 x1 1 2 3 4 5 ua741
-vi 1 0 ac
+vi 1 0 0.1 ac
 r1 0 2 1k
 r2 2 5 10k
 

@@ -3,17 +3,17 @@ Inverting Amplifier with Opamp
 
 .include ua741.txt
 
-v1 2 0 dc 15
-v2 3 0 dc -15
-x1 0 1 2 3 4 ua741
-vi 5 0 ac
-r1 5 1 1k
-r2 1 4 100k
+v1 3 0 dc 15
+v2 4 0 dc -15
+x1 1 2 3 4 5 ua741
+vi 1 0 0.1 ac
+r1 0 2 1k
+r2 2 5 100k
 
 .ac dec 10 10m 10Meg
 .control
 run
-plot vdb(4) - vdb(5)
-print vdb(4) - vdb(5)
+plot vdb(5) - vdb(1)
+print vdb(5) - vdb(1)
 .endc
 .end
