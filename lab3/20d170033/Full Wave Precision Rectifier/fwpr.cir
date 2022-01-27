@@ -4,17 +4,24 @@ Full Wave Precision Rectifier
 .include ua741.txt
 .include Diode_1N914.txt
 
-*half-wave-precision-rectifier
 v1 2 0 dc 15
 v2 3 0 dc -15
-x1 0 1 2 3 4 ua741
-d1 4 1 1N914
-d2 6 4 1N914
 vi 5 0 sin(0 5 1k 0 0 0)
-r1 5 1 10k
-r2 1 6 10k
+
+*half-wave-precision-rectifier
+
+.subckt HWPR 1 2 3 4 5 6 7
+x1 1 2 3 4 5 ua741
+d1 5 2 1N914
+d2 7 5 1N914
+r1 6 2 10k
+r2 2 7 10k
+.include ua741.txt
+.include Diode_1N914.txt
+.ends
 
 *inverting summer
+x3 0 1 2 3 4 5 6 HWPR
 r3 5 8 10k
 r4 6 8 5k
 x2 0 8 2 3 9 ua741
