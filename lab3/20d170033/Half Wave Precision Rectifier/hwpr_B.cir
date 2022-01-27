@@ -1,0 +1,22 @@
+Half Wave Precision Rectifier
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+.include Diode_1N914.txt
+
+v1 2 0 dc 15
+v2 3 0 dc -15
+x1 0 1 2 3 4 ua741
+d1 4 1 1N914
+d2 6 4 1N914
+vi 5 0 sin(0 5 1k 0 0 0)
+r1 5 1 10k
+r2 1 6 10k
+rl 6 0 1k
+
+.tran 1ms 10ms
+.control
+run
+plot v(6) v(4) v(5)
+.endc
+.end
