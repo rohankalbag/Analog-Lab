@@ -1,0 +1,19 @@
+OPAMP based circuit - 2-2 - linear
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+v1 3 0 dc 15
+v2 4 0 dc -15
+x1 1 2 3 4 5 ua741
+rx1 2 5 10k
+vi 6 0 dc 0 ac 0.5
+rx2 6 2 10k
+r1 6 1 1k
+c1 1 0 1n
+.ac dec 10 10m 1000Meg
+.control
+run
+plot {v(6)/v(5)}
+.endc
+.end

@@ -1,4 +1,4 @@
-OPAMP based circuit - 2 - logscale
+OPAMP based circuit - 2-1 - logscale 
 *Rohan Rajesh Kalbag - 20D170033
 
 .include ua741.txt
@@ -9,12 +9,11 @@ x1 1 2 3 4 5 ua741
 rx1 2 5 10k
 vi 6 0 dc 0 ac 0.5
 rx2 6 2 10k
-r1 6 1 1k
-c1 1 0 1n
+r1 6 1 10k
+c1 1 0 47n
 .ac dec 10 10m 1000Meg
 .control
 run
-plot vdb(6) - vdb(5) xlog
-plot {57.29*(vp(6)-vp(5))} xlog
+plot {v(6)/v(5)}
 .endc
 .end
