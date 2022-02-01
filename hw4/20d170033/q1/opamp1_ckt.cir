@@ -9,7 +9,7 @@ x1 1 2 3 0 5 lm324
 vi 1 0 dc
 rl 5 0 10k
 rf 2 5 180k
-rg 6 5 20k
+rg 6 2 20k
 c2 6 0 0.01u
 r1 3 6 75k
 r2 6 0 820
@@ -17,6 +17,6 @@ r2 6 0 820
 .dc vi 0.1 5 0.1
 .control
 run
-plot v(5)
+plot v(1) v(5)
 .endc
 .end
