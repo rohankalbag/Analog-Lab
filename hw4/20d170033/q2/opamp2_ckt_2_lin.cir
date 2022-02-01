@@ -14,6 +14,6 @@ c1 1 0 1n
 .ac dec 10 10m 1000Meg
 .control
 run
-plot {v(6)/v(5)}
+plot {v(5)/v(6)}
 .endc
 .end

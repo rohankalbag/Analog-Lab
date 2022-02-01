@@ -14,7 +14,7 @@ c1 1 0 1n
 .ac dec 10 10m 1000Meg
 .control
 run
-plot vdb(6) - vdb(5) xlog
-plot {57.29*(vp(6)-vp(5))} xlog
+plot vdb(5) - vdb(6) xlog
+plot {57.29*(vp(5)-vp(6))} xlog
 .endc
 .end
