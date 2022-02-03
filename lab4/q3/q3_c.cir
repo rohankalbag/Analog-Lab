@@ -1,0 +1,38 @@
+OPAMP based circuit - 3 
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+.SUBCKT ZENER 1 2
+D1 1 2 DF
+DZ 3 1 DR
+VZ 2 3 3.5
+.MODEL DF D(IS =27.5p RS=0.620 N=1.10 CJO =78.3p VJ=1.00 M =0.330 TT =50.1n)
+.MODEL DR D(IS =5.49f RS=50 N=1.77 )
+.ENDS
+
+.SUBCKT button_sw 1 2
+S1 1 2 c 0 b_sw1
+* Initial value, pulsed value, delay time, rise time, fall time, pulse width *
+V1 c 0 pulse(0 10 0.10 0.02 0.02 0.05 100)
+.model b_sw1 sw vt=1 vh=0.2 ron=1 roff=1000MEG
+.ENDS button_sw
+
+v1 3 0 15 dc
+v2 4 0 -15 dc
+x1 1 2 3 4 5 ua741
+r4 3 2 10k
+c1 2 4 10u
+x4 2 4 button_sw
+r3 5 6 1k
+r2 6 1 10k
+r1 1 0 10k
+x2 6 8 ZENER
+x3 0 8 ZENER
+
+.tran 1ms 2s
+.control
+run
+plot v(6)
+.endc
+.end
