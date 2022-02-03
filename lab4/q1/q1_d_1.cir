@@ -1,0 +1,32 @@
+OPAMP based circuit - 3 
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+
+.SUBCKT ZENER 1 2
+D1 1 2 DF
+DZ 3 1 DR
+VZ 2 3 3.5
+.MODEL DF D(IS =27.5p RS=0.620 N=1.10 CJO =78.3p VJ=1.00 M =0.330 TT =50.1n)
+.MODEL DR D(IS =5.49f RS=50 N=1.77 )
+.ENDS
+
+v1 3 0 15 dc
+v2 4 0 -15 dc
+x1 1 2 3 4 5 ua741
+vi 2 0 sin(0 6 1k 0 0)
+r3 5 6 1k
+r2 6 1 10k
+r1 1 7 10k
+x2 6 8 ZENER
+x3 0 8 ZENER
+va 7 0 3 dc 
+
+.tran 0.01ms 10ms
+.control
+run
+plot v(6) v(2)
+plot v(6) vs v(2)
+
+.endc
+.end
