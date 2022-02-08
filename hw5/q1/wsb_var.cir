@@ -1,0 +1,23 @@
+Wheatstone Bridge
+
+.include ua741.txt
+r1 0 1 300
+rx 0 2 
+r2 1 3 300
+r3 2 3 300
+
+r4 1 4 2.5k
+r5 4 8 100k
+r6 5 0 100k
+r7 2 5 2.5k
+x1 5 4 6 7 8 ua741
+v1 3 0 5 dc
+v2 6 0 15 dc
+v3 7 0 -15 dc
+
+.dc rx 300 310 5
+.control
+run
+plot v(8)
+.endc
+.end
