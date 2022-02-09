@@ -1,9 +1,10 @@
-Thermistor Resistance vs Temperature
+Thermistor (NTC) Resistance vs Temperature
+
 .include Thermistor.txt
 *positive value of alpha 
 v1 0 1 dc 5 
 vd 1 2 ac 0 dc 0
-X1 2 0 temp_val thermistor Ro = 5K alpha = 3548 
+X1 2 0 temp_val thermistor Ro = 5K alpha = -3548 
 vt temp_val 0 ac 0 dc 0
 .dc vt 0 100 1
 .control

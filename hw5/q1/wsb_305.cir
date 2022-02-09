@@ -1,4 +1,4 @@
-Wheatstone Bridge
+Wheatstone Bridge with Rx=305
 
 .include ua741.txt
 r1 0 1 300

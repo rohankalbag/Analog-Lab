@@ -1,4 +1,4 @@
-Wheatstone Bridge
+Wheatstone Bridge with Thermistor (Vout)
 
 .include ua741.txt
 .include Thermistor.txt

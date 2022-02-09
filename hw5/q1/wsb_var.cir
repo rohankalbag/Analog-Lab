@@ -1,4 +1,4 @@
-Wheatstone Bridge
+Vout, Va - Vb Dependence on Rx
 
 .include ua741.txt
 r1 0 1 300
@@ -19,5 +19,6 @@ v3 7 0 -15 dc
 .control
 run
 plot v(8)
+plot v(1) - v(2)
 .endc
 .end
