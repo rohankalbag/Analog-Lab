@@ -1,0 +1,29 @@
+Instrumentation Amplifier
+*Rohan Rajesh Kalbag - 20d170033
+
+.include ua741.txt
+
+vp 3 0 dc 15
+vn 4 0 dc -15
+vi1 1 8 sin(0 250m 1k 0 0)
+vi2 6 8 sin(0 -250m 1k 0 0)
+vcm 8 0 0
+vref 9 0 0
+r6 2 5 10k
+r5 7 10 10k
+r10 2 7 2.21k
+r1 5 12 10k
+r2 12 15 10k
+r3 10 11 10k
+r4 11 9 10k
+x1 1 2 3 4 5 ua741
+x2 6 7 3 4 10 ua741
+x3 11 12 3 4 15 ua741
+
+.tran 0.01ms 10ms
+.control
+run
+plot v(1) - v(6)
+plot v(15)
+.endc 
+.end
