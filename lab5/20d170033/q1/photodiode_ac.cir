@@ -17,6 +17,6 @@ cj 1 0 11p
 .ac dec 10 10 100Meg
 .control
 run
-plot vdb(5) xlog
+plot {20*log10(abs(v(5)/i(vd)))} xlog
 .endc
 .end
