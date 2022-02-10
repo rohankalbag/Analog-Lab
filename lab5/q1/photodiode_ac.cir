@@ -10,13 +10,13 @@ c2 2 0 1u
 r1 1 5 1.4Meg
 c1 1 5 3.3p
 vref 2 0 0.1
-i1 1 6 dc 1.5u ac
+i1 1 6 dc 0 ac 1.5u
 vd 6 0 0 
 cj 1 0 11p
 
 .ac dec 10 10 100Meg
 .control
 run
-plot {20*log(abs(v(5)/i(vd)))} xlog
+plot vdb(5) xlog
 .endc
 .end
