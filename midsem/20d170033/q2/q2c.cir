@@ -1,0 +1,19 @@
+Midsem Q2c
+*Rohan Rajesh Kalbag - 20D170033
+
+.include lm324.txt
+
+v1 3 0 dc 5
+v2 4 0 dc -5
+x1 1 7 3 4 5 lm324
+vin 2 0 dc
+vref 6 0 dc 1.2235 ac 0
+r1 6 1 10k
+r2 1 0 10k
+rg 2 7 3.3k
+rf 7 5 56k 
+.control
+dc vin 0 2 1m
+plot v(5)
+.endc
+.end
