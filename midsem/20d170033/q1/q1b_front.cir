@@ -1,0 +1,25 @@
+Midsem Q1b
+*Rohan Rajesh Kalbag - 20D170033
+
+.include ua741.txt
+.include zener_1N4732A.txt
+.include Diode_1N914.txt
+
+v1 3 0 dc 15
+v2 4 0 dc -15
+x1 8 2 3 4 5 ua741
+vin 2 0 dc
+r2 3 7 13.3k
+r3 4 6 13.3k
+x2 8 9 DI_1N4732A
+x3 0 9 DI_1N4732A
+d3 5 6 1N914
+d1 7 5 1N914
+d4 8 6 1N914
+d2 7 8 1N914
+.control
+dc vin -10 10 0.01
+*plot v(8)
+print v(8)
+.endc
+.end
