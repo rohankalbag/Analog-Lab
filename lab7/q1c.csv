@@ -1,4 +1,4 @@
-Freq.,Maximum (mv),Minimum (mv),Peak to Peak (mv)
+Frequency(Hz),O/P Maximum(mV),O/P Minimum(mV),O/P Peak to Peak(mV)
 50,40,-40,80
 100,40,-60,100
 150,60,-60,120
