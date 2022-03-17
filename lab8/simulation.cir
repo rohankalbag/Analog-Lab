@@ -21,8 +21,8 @@ r2 17 0 1k
 .dc vin 0.006 10 0.1
 .control
 run
-plot v(15)
 plot v(20)
+plot v(20) vs ln(v(1))
 print v(20)
 .endc
 .end
