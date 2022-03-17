@@ -12,7 +12,7 @@ r0 2 6 3.83k
 x2 0 6 3 4 7 TL084
 d1 6 7 1N4148
 r11 7 12 1k
-voff 11 0 -0.2688
+voff 11 0 -0.262
 r12 12 15 1k
 x3 11 12 3 4 15 TL084
 x4 15 17 3 4 20 TL084
@@ -21,6 +21,7 @@ r2 17 0 1k
 .dc vin 0.006 10 0.1
 .control
 run
+plot v(15)
 plot v(20)
 print v(20)
 .endc
