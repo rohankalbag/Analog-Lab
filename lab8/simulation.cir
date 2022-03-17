@@ -1,0 +1,27 @@
+Lab 8 Simulation of Logarithmic Amplifier
+*Rohan Rajesh Kalbag - 20D170033
+
+.include 1N4148_1.txt
+.include TL084.txt
+
+vin 1 0 dc
+vcc 3 0 15 
+vee 4 0 -15
+x1 1 2 3 4 2 TL084
+r0 2 6 3.83k
+x2 0 6 3 4 7 TL084
+d1 6 7 1N4148
+r11 7 12 1k
+voff 11 0 -0.2688
+r12 12 15 1k
+x3 11 12 3 4 15 TL084
+x4 15 17 3 4 20 TL084
+r3 17 20 19.114k
+r2 17 0 1k
+.dc vin 0.006 10 0.1
+.control
+run
+plot v(20)
+print v(20)
+.endc
+.end
