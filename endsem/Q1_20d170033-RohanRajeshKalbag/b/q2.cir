@@ -1,0 +1,21 @@
+Question 2
+*Rohan Rajesh Kalbag - 20D170033
+
+.include TL084.txt
+
+v1 3 0 dc 15
+v2 4 0 dc -15
+x1 1 2 3 4 5 TL084
+r1 2 0 1k
+r2 2 5 2k
+rx 1 0 180
+c1 1 0 0.1u
+c2 1 6 0.1u
+ry 6 5 180
+
+.tran 10us 10ms 9ms
+.control
+run
+plot v(5)
+.endc
+.end
