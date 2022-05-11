@@ -2,7 +2,7 @@
 
 ## EE 230 - Spring Semester 2022 - Indian Institute of Technology Bombay
 
-## Course Instructor - Prof. Anil Kottantharayil, Prof. Apurba Laha
+## Course Instructors - Prof. Anil Kottantharayil, Prof. Apurba Laha
 
 *This repository contains all the netlists, plots, reports for all the various circuits simulated using [NGSPICE](http://ngspice.sourceforge.net/).*
 
