@@ -1,10 +1,10 @@
 # Analog Circuits Lab
 
-## EE 230 - Spring Semester 2022
+## EE 230 - Spring Semester 2022 - Indian Institute of Technology Bombay
 
 ## Course Instructor - Prof. Anil Kottantharayil, Prof. Apurba Laha
 
-This repository contains all the netlists, plots, reports for all the various circuits simulated using [NGSPICE](http://ngspice.sourceforge.net/).
+*This repository contains all the netlists, plots, reports for all the various circuits simulated using [NGSPICE](http://ngspice.sourceforge.net/).*
 
 
-Towards the later half of the course, the labs were conducted offline at [Wadhwani Electronics Lab, IIT Bombay](https://www.ee.iitb.ac.in/~wel_iitb/) and the circuits were assembled on breadboards and the readings were obtained using instruments such as DMMs, DSOs and AFGs. The reports for these offline labs can also be found here.
+*Towards the later half of the course, the labs were conducted offline at [Wadhwani Electronics Lab, IIT Bombay](https://www.ee.iitb.ac.in/~wel_iitb/) and the circuits were assembled on breadboards and the readings were obtained using instruments such as DMMs, DSOs and AFGs. The reports for these offline labs can also be found here.*
